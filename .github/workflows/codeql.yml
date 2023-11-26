@@ -14,9 +14,11 @@ name: "CodeQL"
 on:
   push:
     branches: [ "master" ]
-  pull_request:
+#  pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ "master" ]
+#    branches: [ "master" ]
+  workflow_run:
+    
   schedule:
     - cron: '22 20 * * 6'
 
@@ -36,7 +38,7 @@ jobs:
       security-events: write
 
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
         language: [ 'javascript-typescript' ]
         # CodeQL supports [ 'c-cpp', 'csharp', 'go', 'java-kotlin', 'javascript-typescript', 'python', 'ruby', 'swift' ]
