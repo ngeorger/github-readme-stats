@@ -3,4 +3,7 @@
     "editor.formatOnSave": false,
     "editor.autoIndent": "advanced",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "yaml.schemas": {
+        "https://json.schemastore.org/github-issue-config.json": "file:///workspaces/github-readme-stats/.github/ISSUE_TEMPLATE/config.yml"
+    },
 }
