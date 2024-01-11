@@ -22,7 +22,7 @@ permissions:
 
 jobs:
   closeEmptyIssuesAndTemplates:
-    if: github.repository == 'anuraghazra/github-readme-stats'
+    if: github.repository == 'ngeorger/github-readme-stats'
     name: Close empty issues
     runs-on: ubuntu-latest
     steps:
@@ -32,7 +32,7 @@ jobs:
       - name: Run empty issues closer action
         uses: rickstaa/empty-issues-closer-action@159d16caa5725ed56e1b7e3f44b358070215602d # v1.1.65
         env:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ github.token }}
         with:
           close_comment:
             Closing this issue because it appears to be empty. Please update the
